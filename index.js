@@ -1,6 +1,6 @@
 // dotenv at CONFIG_FILE or .env
 let dotenv = require('dotenv')
-require('dotenv').load({path: process.env.CONFIG_FILE ? process.env.CONFIG_FILE : '.env'})
+// require('dotenv').load({path: process.env.CONFIG_FILE ? process.env.CONFIG_FILE : '.env'})
 
 let TESTNET = (process.env.TESTNET === '1' || (process.env.TESTNET && process.env.TESTNET.toLowerCase() === 'true'))
 let REGTEST = (process.env.REGTEST === '1' || (process.env.REGTEST && process.env.REGTEST.toLowerCase() === 'true'))
