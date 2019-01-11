@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd /indexd
-forever ./index.js
+/usr/bin/forever ./index.js

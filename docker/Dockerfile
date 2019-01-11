@@ -14,16 +14,14 @@ COPY ./package.json /indexd
 
 RUN echo "Using nodejs version `node --version` and npm version `npm --version`"
 RUN npm install
-RUN npm -g install forever
-
 COPY ./lib/* /indexd/lib/
 COPY index.js /indexd
 
 # start script
-# COPY ./docker/start.sh /usr/local/bin/start.sh
-# RUN chmod a+x /usr/local/bin/start.sh
+COPY ./docker/start.sh /usr/local/bin/start.sh
+RUN chmod a+x /usr/local/bin/start.sh
 
 EXPOSE 8432 18432
 
 # start indexd
-CMD ["npm", "start_forever"]
+CMD ["npm", "start"]
