@@ -14,7 +14,6 @@ COPY ./package.json /indexd
 
 RUN echo "Using nodejs version `node --version` and npm version `npm --version`"
 RUN npm install
-RUN npm install -g forever
 COPY ./lib/* /indexd/lib/
 COPY index.js /indexd
 
@@ -25,4 +24,4 @@ RUN chmod a+x /usr/local/bin/start.sh
 EXPOSE 8432 18432 28432
 
 # start indexd
-CMD ["forever", "index.js"]
+CMD ["npm", "start"]
