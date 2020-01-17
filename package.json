@@ -16,7 +16,7 @@
     "cors": "^2.8.5",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
-    "indexd": "github:chiguireitor/indexd#develop",
+    "indexd": "github:wakumo/indexd#develop",
     "leveldown": "^4.0.2",
     "qup": "^1.2.1",
     "run-parallel": "^1.1.6",
@@ -24,6 +24,7 @@
     "zmq": "^2.15.3"
   },
   "devDependencies": {
+    "forever": "^2.0.0",
     "nodemon": "^1.18.9"
   }
 }
