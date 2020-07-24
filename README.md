@@ -164,5 +164,51 @@ And receive a response like this:
 }
 ```
 
+### TX Endpoint
+
+To check on the transaction details of a TXID, you can call:
+```
+http://localhost:{SERVER_PORT}/tx/:txid
+```
+
+And receive a response like this:
+```json
+{
+  "txid": "d4b9b84e7417b169cc017f9740561d9d6f7fe3ca000001f69c5d319f3da30993",
+  "hash": "d4b9b84e7417b169cc017f9740561d9d6f7fe3ca000001f69c5d319f3da30993",
+  "version": 1,
+  "size": 109,
+  "vsize": 109,
+  "weight": 436,
+  "locktime": 0,
+  "vin": [
+    {
+      "coinbase": "0300e204022507062f503253482f",
+      "sequence": 4294967295
+    }
+  ],
+  "vout": [
+    {
+      "value": 25.0092815,
+      "n": 0,
+      "scriptPubKey": {
+        "asm": "023dd72e59147d5c68de4d028b43ccbb68fb0214134cab308ff9641cca8e9a4fc5 OP_CHECKSIG",
+        "hex": "21023dd72e59147d5c68de4d028b43ccbb68fb0214134cab308ff9641cca8e9a4fc5ac",
+        "reqSigs": 1,
+        "type": "pubkey",
+        "addresses": [
+          "n2Jndy6qKyYf7ZUASGSSGUr6SVqa5Aoe1S"
+        ]
+      }
+    }
+  ],
+  "hex": "01000000010000000000000000000000000000000000000000000000000000000000000000ffffffff0e0300e204022507062f503253482fffffffff0196221195000000002321023dd72e59147d5c68de4d028b43ccbb68fb0214134cab308ff9641cca8e9a4fc5ac00000000",
+  "blockhash": "0000000029beda06396c70b48b26d8b9affba9c421439ba1958d40c47d19999d",
+  "confirmations": 1461435,
+  "time": 1422461005,
+  "blocktime": 1422461005
+}
+```
+
 
 ## License [MIT](LICENSE)
